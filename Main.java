@@ -85,26 +85,3 @@ public class Main {
         }
     }
 }
-
-/*
-ITERATIVE ANALYSIS PERFORMANCE
-The time complexity using iterative solution for the water jug puzzle is O(target * largeCapacity)
-and for the space complexity is O(target * largeCapacity) also. This is because, in the worst-case situation,
-we might need to continually fill the larger jug with water before transferring its contents to the smaller jug
-with smaller caps until we reach the appropriate level of water. The quantity of procedures necessary would therefore
-be inversely proportional to the maximum capacity of each jug. The number of iterations is related to the goal
-amount of water since we repeat the while loop until we reach the desired level of water.
-O(target * largeCapacity) would be the overall time complexity as a result.
- */
-
-/*
-RECURSIVE ANALYSIS PERFORMANCE
-On the other hand, the recursive method's is not too straightforward, as it might actually be quite faster
-than the predicted worst case time complexity. Let's say n is the largest jug capacity and d is the depth of
-the recursion tree (the most depth is the target amount of water we're looking for)/ In the worst case scenario,
-if all jug state combinations are unique and each level of the recursive tree has 6 possible outcomes, number of
-function call will be bounded by 6^d. Each function call takes O(n) time, therefore total time complexity is
-O(target * n). So to put it bluntly, the worst case time complexity can be denoted as O(target * 6^d * n).
-However that is the worst case scenario and in practice, the actual function call can be much smaller since
-revisited states are skipped. Therefore the runtime might actually be a lot faster.
- */
